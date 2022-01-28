@@ -1,4 +1,5 @@
 HEAD-OUT PLETHYSMOGRAPHY 3D PRINTED PARTS
+=========================================
 
 This folder contains files of all the 3D printed parts used by the Renquist Lab for building head-out plethysmography chambers. For each part, two files have been provided: (1) a .blend file that can be edited with Blender, a free and open source 3D creation suite; (2) a .stl file that can be used with most 3D printers.
 
