@@ -111,4 +111,12 @@ Installation Instructions for Mac OS X
    
 Operation
 ---------
+Upon opening the data analysis software, you will see the Respiration Analysis window two blank graphs. The process for analyzing a breathing datafile is all contained within the File, Edit, Analysis, and View menus at the top of the window. For ease of use, only the options useful to the currently displayed data will be accessible, and all other options will be grayed out. 
 
+Please note that the software is not currently robust enough to switch between datafiles during the same analysis session, or to undo any steps taken. The original datafile will never be altered by this software, so don't worry if you make a mistake. If you need to restart an analysis or open a different datafile, you must close and restart the software. 
+
+The main steps for completing a full analysis are as follows:
+
+1. In the File menu, click Open... and select the RCALV file you want to analyze. The software will load the datafile and display the raw voltage data from the pressure transducer on the top graph. It will automatically convert this voltage signal to a pressure signal using the pressure transducer's transfer function. Note that you can use the X Position slider bar below the two graphs to scroll through the full data set.
+
+2. 
