@@ -10,7 +10,7 @@ Installation Instructions for Windows
 
 1. Download the latest version of Python 3 from http://www.python.org (Python 3.10.1 as of 12/20/2021) and install it. Make sure to select the box to "Add Python to PATH" during the installation process to make it easier for your computer to locate the installed program. Once the installation finishes, there should be a "Setup was successful" confirmation window. You can ignore the option to "Disable path length limit."
 
-2. Download the plethysmography project files from this github page (https://github.com/bjrenquist/plethysmography) by clicking the green "Code" button and selecting "Download ZIP". Right click and "Extract All" to unzip the downloaded folder and move it to the location of your choice (i.e. Desktop, Documents, etc.). Open this folder and navigate to the subfolder "plethysmography-main\data_analysis\respiratory_analysis_v1_5", which contains four Python (.py) files. Create a shortcut to the "respiration_analysis_v1-5.py" file and place the shortcut on your Desktop for quick access.
+2. Download the plethysmography project files from this github page (https://github.com/bjrenquist/plethysmography) by clicking the green "Code" button and selecting "Download ZIP". Right click and "Extract All" to unzip the downloaded folder and move it to the location of your choice (i.e. Desktop, Documents, etc.). Open this folder and navigate to the subfolder "plethysmography-main\data_analysis\respiratory_analysis_v1_6", which contains four Python (.py) files. Create a shortcut to the "respiration_analysis_v1-5.py" file and place the shortcut on your Desktop for quick access.
 
 3. Install the Python modules that are required to run the respiration_analysis software. This step can be intimidating, but if you are careful and double check spelling at each step, it should go smoothly.
 
@@ -54,7 +54,7 @@ Installation Instructions for Mac OS X
 1. Download the latest version of Python 3 from http://www.python.org (Python 3.10.1 as of 12/20/2021)
    and install it. The default install settings should be sufficient.
 
-2. Download the plethysmography project files from this github page (https://github.com/bjrenquist/plethysmography) by clicking the green "Code" button and selecting "Download ZIP". Double click the zipped folder and it will automatically unzip/decrompress. Move the unzipped folder to the location of your choice (i.e. Desktop, Documents, etc.). Open this folder and navigate to the subfolder "plethysmography-main/data_analysis/respiratory_analysis_v1_5", which contains four Python (.py) files.
+2. Download the plethysmography project files from this github page (https://github.com/bjrenquist/plethysmography) by clicking the green "Code" button and selecting "Download ZIP". Double click the zipped folder and it will automatically unzip/decrompress. Move the unzipped folder to the location of your choice (i.e. Desktop, Documents, etc.). Open this folder and navigate to the subfolder "plethysmography-main/data_analysis/respiratory_analysis_v1_6", which contains four Python (.py) files.
 
 3. Install the Python modules that are required to run the respiration_analysis software. This step can
    be intimidating, but if you are careful and double check spelling at each step, it should go smoothly.
@@ -90,16 +90,16 @@ Installation Instructions for Mac OS X
 4. Now that all the required modules are installed, you should be able to run the respiration_analysis
    program. To do this, create a small text file with a one-line Terminal command that you can
    copy and paste into the Terminal window. You will need to figure out the exact filepath to the
-   "respiratory_analysis_v1_5.py" file. The easiest way to do this is to have the Terminal window and the
+   "respiratory_analysis_v1_6.py" file. The easiest way to do this is to have the Terminal window and the
    unzipped folder from step 2 opened side-by-side. If you drag the file into the Terminal window, it will
    show the full filepath. It should look similar to this:
        
-        /Users/Username/Desktop/plethysmography-main/data_analysis/respiratory_analysis_v1_5/respiratory_analysis_v1_5.py
+        /Users/Username/Desktop/plethysmography-main/data_analysis/respiratory_analysis_v1_6/respiratory_analysis_v1_6.py
 
    Open a text editor and copy/paste this filepath onto the first line. Now, add "python3 " (with a space)
    before the filename so the line looks like this:
         
-        python3 /Users/Username/Desktop/plethysmography-main/data_analysis/respiratory_analysis_v1_5/respiratory_analysis_v1_5.py
+        python3 /Users/Username/Desktop/plethysmography-main/data_analysis/respiratory_analysis_v1_6/respiratory_analysis_v1_6.py
 
    Save the text file and put it on your Desktop for convenience. To run the analysis software, you will
    open a Terminal window, open this text file, copy/paste the whole line into the Terminal window, then 
