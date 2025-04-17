@@ -1,5 +1,5 @@
-import respiration_v1_5 as respiration
-import transducer_v1_5 as transducer
+import respiration_v1_6 as respiration
+import transducer_v1_6 as transducer
 import numpy as np
 import tkinter as tk
 from tkinter import filedialog, messagebox, simpledialog

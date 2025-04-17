@@ -189,12 +189,12 @@ class Respiration:
         self.excluded_calibration_volumes = np.append(self.excluded_calibration_volumes, volume)
 
     def calculate_breath_stats(self):
-        self.start_idx = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=np.int))
-        self.stop_idx = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=np.int))
-        self.i50v = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=np.int))
-        self.i64v = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=np.int))
-        self.e50v = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=np.int))
-        self.e64v = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=np.int))
+        self.start_idx = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=int))
+        self.stop_idx = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=int))
+        self.i50v = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=int))
+        self.i64v = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=int))
+        self.e50v = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=int))
+        self.e64v = np.ma.asarray(np.full(self.num_breaths, np.nan, dtype=int))
 
         self.landmarks = [self.inhale_flow_peaks,
                           self.exhale_flow_peaks,
@@ -638,8 +638,8 @@ class Respiration:
 
         num_iterations = len(window_sizes) * len(shifts)
         iteration = 0
-        num_peaks_by_idx = np.zeros(self.len_data, dtype=np.int)
-        num_troughs_by_idx = np.zeros(self.len_data, dtype=np.int)
+        num_peaks_by_idx = np.zeros(self.len_data, dtype=int)
+        num_troughs_by_idx = np.zeros(self.len_data, dtype=int)
 
         for idx_window_sizes, window_size in enumerate(window_sizes):
             for idx_shifts, shift in enumerate(shifts):
@@ -682,8 +682,8 @@ class Respiration:
 
                 iteration += 1
 
-        num_peaks_found = np.zeros(num_iterations, dtype=np.int)
-        num_troughs_found = np.zeros(num_iterations, dtype=np.int)
+        num_peaks_found = np.zeros(num_iterations, dtype=int)
+        num_troughs_found = np.zeros(num_iterations, dtype=int)
 
         for idx in range(num_iterations):
             num_peaks_found[idx] = (num_peaks_by_idx > idx).sum()
@@ -803,10 +803,10 @@ class Respiration:
         zero_cross_threshold = np.mean(flow_data)
         self.data_zero = zero_cross_threshold
 
-        inhale_onsets = np.ma.asarray(np.array([], dtype=np.int))
-        exhale_pause_onsets = np.ma.asarray(np.array([], dtype=np.int))
-        exhale_onsets = np.ma.asarray(np.array([], dtype=np.int))
-        inhale_pause_onsets = np.ma.asarray(np.array([], dtype=np.int))
+        inhale_onsets = np.ma.asarray(np.array([], dtype=int))
+        exhale_pause_onsets = np.ma.asarray(np.array([], dtype=int))
+        exhale_onsets = np.ma.asarray(np.array([], dtype=int))
+        inhale_pause_onsets = np.ma.asarray(np.array([], dtype=int))
         final_inhale_onset = -1
         num_breaths = self.num_breaths
 
@@ -881,14 +881,14 @@ class Respiration:
                 inhale_pause_onsets = np.append(inhale_pause_onsets, inhale_pause_onset)
 
         # Find offset indices
-        inhale_offsets = np.ma.asarray(np.full(num_breaths, -1, dtype=np.int))
-        inhale_pause_offsets = np.ma.asarray(np.full(num_breaths, -1, dtype=np.int))
-        inhale_volume_peaks = np.ma.asarray(np.full(num_breaths, -1, dtype=np.int))
-        inhale_flow_peaks = np.ma.asarray(np.full(num_breaths, -1, dtype=np.int))
-        exhale_offsets = np.ma.asarray(np.full(num_breaths, -1, dtype=np.int))
-        exhale_pause_offsets = np.ma.asarray(np.full(num_breaths, -1, dtype=np.int))
-        exhale_volume_peaks = np.ma.asarray(np.full(num_breaths, -1, dtype=np.int))
-        exhale_flow_peaks = np.ma.asarray(np.full(num_breaths, -1, dtype=np.int))
+        inhale_offsets = np.ma.asarray(np.full(num_breaths, -1, dtype=int))
+        inhale_pause_offsets = np.ma.asarray(np.full(num_breaths, -1, dtype=int))
+        inhale_volume_peaks = np.ma.asarray(np.full(num_breaths, -1, dtype=int))
+        inhale_flow_peaks = np.ma.asarray(np.full(num_breaths, -1, dtype=int))
+        exhale_offsets = np.ma.asarray(np.full(num_breaths, -1, dtype=int))
+        exhale_pause_offsets = np.ma.asarray(np.full(num_breaths, -1, dtype=int))
+        exhale_volume_peaks = np.ma.asarray(np.full(num_breaths, -1, dtype=int))
+        exhale_flow_peaks = np.ma.asarray(np.full(num_breaths, -1, dtype=int))
 
         for idx in range(num_breaths):
             # need to get last breath's exhale offset differently
